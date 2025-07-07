@@ -1,23 +1,32 @@
 import './globals.css'
 import Navbar from '@/components/Navbar.jsx';
-import { Karla } from 'next/font/google';
+import Footer from '@/components/Footer';
+import { Poppins } from 'next/font/google';
+
 
 export const metadata = {
   title: "Sıla Öztürk",
   description: "",
 };
 
-const karla = Karla({
+const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['400', '700'],  // İstersen diğer ağırlıkları da ekleyebilirsin
+  weight: ['300', '400', '500', '600', '700'], // İstediğin ağırlıklara göre güncelleyebilirsin
 });
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body
+      className={`${poppins.className} flex flex-col min-h-screen bg-cover bg-center`}
+      style={{
+          backgroundImage: "url('/bg-12.jpg')",
+        }}>
         <Navbar />
-        {children}
+        <div className='flex-grow'>
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   );

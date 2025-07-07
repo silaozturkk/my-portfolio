@@ -1,2 +1,27 @@
 @import "tailwindcss";
 
+
+@keyframes fadeLoop {
+  0%, 100% {
+    color: #6b7280; /* Tailwind text-gray-500 */
+  }
+  50% {
+    color: #a1a1aa; /* Tam kodla: biraz daha açık ama beyaz değil */
+  }
+}
+
+.text-fade-loop {
+  animation: fadeLoop 3s ease-in-out infinite;
+}
+@keyframes fadeLoop {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-fade-loop {
+  animation: fadeLoop 3s ease-in-out infinite;
+}
