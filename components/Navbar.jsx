@@ -12,7 +12,7 @@ const Navbar = () => {
     const [isDarkModeOpen ,setIsDarkModeOpen] = useState(false);
 
     return (
-        <div className="shadow-sm sticky top-0 z-50 text-xl flex flex-row justify-between px-20 md:justify-between lg:px-44 py-4 items-center bg-pink-100">
+        <div className="shadow-sm sticky top-0 z-50 text-xl flex flex-row justify-between px-20 md:justify-between lg:px-44 py-4 items-center bg-pink-50/90">
             <div className="0 border-2 border-pink-400 rounded-full p-1 hover:bg-pink-500  transition-colors duration-300">
                 <Link href="/" className="text-pink-400 hover:text-pink-100 text-2xl font-bold">So</Link>
             </div>

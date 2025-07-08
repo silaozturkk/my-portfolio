@@ -1,7 +1,7 @@
 function Footer() {
     const currentYear = new Date().getFullYear();
     return (
-        <footer className="text-gray-500 py-4 md:py-6 flex justify-around items-center w-full border-t bottom-0 text-[12px] md:text-base ">
+        <footer className="text-gray-600 py-4 md:py-6 flex justify-around items-center w-full border-t bottom-0 text-[12px] md:text-base bg-pink-50">
             <p className="">
                 {currentYear} © All Rights Reserved.
             </p>

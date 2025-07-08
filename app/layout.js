@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       <body
       className={`${poppins.className} flex flex-col min-h-screen bg-cover bg-center`}
       style={{
-          backgroundImage: "url('/bg-12.jpg')",
+          backgroundImage: "url('/bg-13.jpg')",
         }}>
         <Navbar />
         <div className='flex-grow'>
