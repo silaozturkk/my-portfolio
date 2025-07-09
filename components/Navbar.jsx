@@ -6,69 +6,79 @@ import { useState } from "react";
 import { LuMoon } from "react-icons/lu";
 import { GoSun } from "react-icons/go";
 
+import useThemeSwitcher from "./hooks/useTeamsSwitcher";
+
+
 const Navbar = () => {
     const pathname = usePathname();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isDarkModeOpen ,setIsDarkModeOpen] = useState(false);
+    const {mode, setMode} = useThemeSwitcher();
+
+    const handleSwitchMode = () => {
+        setMode(mode==="light" ? "dark":"light")
+    }
 
     return (
-        <div className="shadow-sm sticky top-0 z-50 text-xl flex flex-row justify-between px-20 md:justify-between lg:px-44 py-4 items-center bg-pink-50/90">
-            <div className="0 border-2 border-pink-400 rounded-full p-1 hover:bg-pink-500  transition-colors duration-300">
+        <div className="shadow-sm sticky top-0 z-50 text-xl flex justify-between items-center px-20 md:px-20 lg:px-44 py-4 bg-pink-50/90 dark:bg-[#2c1c1e]/85 ">
+            <div className="border-2 border-pink-400 rounded-full p-1 hover:bg-pink-500  transition-colors duration-300">
                 <Link href="/" className="text-pink-400 hover:text-pink-100 text-2xl font-bold">So</Link>
             </div>
             <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="md:hidden text-3xl text-pink-500 z-20 "
+                className="md:hidden text-3xl text-pink-500 z-20 ml-auto"
             >
                 {isMenuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
             </button>
-            <div className="hidden md:flex flex-row gap-8">
-                <Link
-                    className={`hover:text-pink-400 transition-colors duration-300 ${
-                        pathname === "/" ? "text-pink-500" : "text-neatural-600"
-                    }`}
-                    href="/"
-                >
-                    Home
-                </Link>
-                <Link
-                    className={`hover:text-pink-400 transition-colors duration-300 ${
-                        pathname === "/about" ? "text-pink-500" : "text-neatural-600"
-                    }`}
-                    href="/about"
-                >
-                    About Me
-                </Link>
-                <Link
-                    className={`hover:text-pink-400 transition-colors duration-300 ${
-                        pathname === "/contact" ? "text-pink-500" : "text-neatural-600"
-                    }`}
-                    href="/contact"
-                >
-                    Contact
-                </Link>
-                <button onClick={() => setIsDarkModeOpen(!isDarkModeOpen)}
-                    className=" text-3xl text-pink-500 z-20 "
+            <div className="pt-1 flex flex-row gap-4" >
+                <div className="hidden md:flex flex-row gap-8 items-center justify-center">
+                    <Link
+                        className={`hover:text-pink-400 transition-colors duration-300 ${
+                            pathname === "/" ? "text-pink-500" : "text-neutral-600 dark:text-pink-100"
+                        }`}
+                        href="/"
                     >
-                    {isDarkModeOpen ? <GoSun /> : <LuMoon />}
-                </button>
+                        Home
+                    </Link>
+                    <Link
+                        className={`hover:text-pink-400 transition-colors duration-300 ${
+                        pathname === "/about" ? "text-pink-500" : "text-neutral-600 dark:text-pink-100"
+                        }`}
+                        href="/about"
+                    >
+                        About Me
+                    </Link>
+                    <Link
+                        className={`hover:text-pink-400 transition-colors duration-300 ${
+                            pathname === "/contact" ? "text-pink-500" : "text-neutral-600 dark:text-pink-100"
+                        }`}
+                        href="/contact"
+                    >
+                        Contact
+                    </Link>
+                    <button
+                        onClick={handleSwitchMode}
+                        className="text-3xl text-neutral-600 z-20 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition dark:text-pink-100"
+                    >
+                    {mode === "dark" ? <GoSun /> : <LuMoon />}
+                    </button>
+                    
+                </div> 
             </div>
-            
             <div
-                className={`md:hidden fixed top-0 left-0 w-full pb-5 bg-pink-100/90 flex flex-col items-center gap-8 pt-20 text-xl transition-transform duration-500  ${
+                className={`md:hidden fixed top-0 left-0 w-full pb-5 bg-pink-100/90 dark:bg-[#2c1c1e]/95 flex flex-col items-center gap-8 pt-20 text-xl transition-transform duration-500  ${
                 isMenuOpen ? "translate-y-0" : "-translate-y-full"
                 }`}>
                 <Link
                     onClick={() => setIsMenuOpen(false)}
                     className={`hover:text-pink-400 transition-colors duration-300 ${
-                        pathname === "/" ? "text-pink-500" : "text-neatural-600"
+                        pathname === "/" ? "text-pink-500" : "text-neutral-600 dark:text-pink-100"
                     }`}
                     href="/"
                 >Home</Link>
                 <Link
                     onClick={() => setIsMenuOpen(false)}
                     className={`hover:text-pink-400 transition-colors duration-300 ${
-                        pathname === "/about" ? "text-pink-500" : "text-neatural-600"
+                        pathname === "/about" ? "text-pink-500" : "text-neutral-600 dark:text-pink-100"
                     }`}
                     href="/about"
                 >About Me</Link>
@@ -76,15 +86,17 @@ const Navbar = () => {
                 <Link
                     onClick={() => setIsMenuOpen(false)}
                     className={`hover:text-pink-400 transition-colors duration-300 ${
-                        pathname === "/contact" ? "text-pink-500" : "text-neatural-600"
+                        pathname === "/contact" ? "text-pink-500" : "text-neutral-600 dark:text-pink-100"
                     }`}
                     href="/contact"
                 >Contact</Link>
-                <button onClick={() => setIsDarkModeOpen(!isDarkModeOpen)}
-                    className="md:hidden text-3xl text-pink-500 z-20 "
+                <button
+                    onClick={handleSwitchMode}
+                            className="text-3xl text-neutral-500 z-20 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition dark:text-pink-100"
                     >
-                    {isDarkModeOpen ? <GoSun /> : <LuMoon />}
+                    {mode === "dark" ? <GoSun /> : <LuMoon />}
                 </button>
+
             </div>
         </div>
     );

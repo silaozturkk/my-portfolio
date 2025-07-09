@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+@tailwind utilities;
+
+
 
 @keyframes fadeLoop {
   0%, 100% {
@@ -25,3 +28,5 @@
 .animate-fade-loop {
   animation: fadeLoop 3s ease-in-out infinite;
 }
+
+@custom-variant dark (&:where(.dark, .dark *));

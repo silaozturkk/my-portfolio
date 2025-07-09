@@ -8,7 +8,7 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { FaReact } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 import { FaPython } from "react-icons/fa";
-import { act, useState } from "react";
+import { useState } from "react";
 
 
 const About = () => {
@@ -27,7 +27,7 @@ const About = () => {
                 </img>
                 <div className="lg:px-14 flex flex-col gap-6 md:gap-12 pt-4 lg:pt-14">
                     <h1 className="text-5xl md:text-6xl bg-gradient-to-r from-pink-400 via-pink-600 to-red-600 bg-clip-text text-transparent animate-fade-loop drop-shadow-lg font-semibold md:font-bold text-center lg:text-start">About Me</h1>
-                    <div className="flex flex-col gap-4 px-3 md:px-4 lg:px-0 text-neutral-600 text-base md:text-xl text-justify lg:text-start">
+                    <div className="flex flex-col gap-4 px-4 md:px-4 lg:px-0 text-neutral-600 dark:text-white text-base md:text-xl text-justify lg:text-start">
                         <p>
                             Hi, I'm Sıla Öztürk, a Computer Engineering student based in Istanbul, Turkey. I'm passionate about creating solutions that make people's lives easier through technology. I enjoy solving problems by writing clean and efficient code, and I continuously work on improving myself by learning new tools and frameworks.
                         </p>
@@ -68,7 +68,7 @@ const About = () => {
                             Education</button>
                     </div>
                 </div>
-                <div>
+                <div className="md:pb-8">
                     <div className={`${activeTab === "Experience" ? "" : "hidden"}`}>
                         <div className="flex flex-col lg:flex-row justify-center items-center">
                             <img 
@@ -76,12 +76,12 @@ const About = () => {
                                 alt="Avatar"
                                 width={450}
                                 height={300}
-                                className="order-last"
+                                className="order-last md:order-first"
                             />
                           
-                            <div className="flex flex-col gap-1 mx-5 lg:mx-32 text-neutral-600">
-                                <h1 className="text-xl md:text-2xl bg-gradient-to-r text-pink-500 drop-shadow-lg font-semibold md:font-bold">Software Intern — Beylikdüzü Municipality<span className="hidden md:flex">, Directorate of Information Technologies</span></h1>
-                                <p className="text-base text-pink-500">June 2025 – July 2025</p>
+                            <div className="flex flex-col gap-1 mx-5 lg:mx-32 text-neutral-600 dark:text-white">
+                                <h1 className="text-xl md:text-2xl bg-gradient-to-r text-pink-500 drop-shadow-lg font-semibold md:font-bold">Software Developer Intern | Beylikdüzü Municipality<span className="hidden md:flex"> Directorate of Information Technologies</span></h1>
+                                <p className="text-base text-pink-500 ">June 2025 – July 2025</p>
                                 <p>Learned web development technologies including JavaScript, React, and Next.js during the internship.</p>
                                 <p>Developed a personal portfolio website using React, Next.js, and Tailwind CSS to showcase my projects and skills.</p>
                                 <p>Built a simple blog application where users can view and add posts, applying component-based architecture and basic state management.</p>
@@ -93,7 +93,7 @@ const About = () => {
 
                     <div className={`${activeTab === "Education" ? "" : "hidden"}`}>
                         <div className="flex flex-col lg:flex-row justify-center items-center">
-                            <div className="flex flex-col gap-1 mx-5 lg:mx-32 text-neutral-600">
+                            <div className="flex flex-col gap-1 mx-5 lg:mx-32 text-neutral-600 dark:text-white">
                                 <h1 className="text-2xl bg-gradient-to-r text-pink-500 drop-shadow-lg font-semibold md:font-bold ">Computer Engineering | İstanbul Rumeli University </h1>
                                 <p className="text-base text-pink-500">2023-2027</p>
                                 <p>I am a 3nd-year Computer Engineering student at İstanbul Rumeli University with a GPA of 3.62/4.00.</p>
