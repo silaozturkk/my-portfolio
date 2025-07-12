@@ -32,28 +32,34 @@ const Navbar = () => {
             <div className="pt-1 flex flex-row gap-4" >
                 <div className="hidden md:flex flex-row gap-8 items-center justify-center">
                     <Link
-                        className={`hover:text-pink-400 transition-colors duration-300 ${
-                            pathname === "/" ? "text-pink-500" : "text-neutral-600 dark:text-pink-100"
-                        }`}
                         href="/"
+                        onClick={() => setIsMenuOpen(false)}
+                        className={`relative group overflow-hidden transition-colors duration-300 ${
+                        pathname === "/" ? "text-pink-500" : "text-neutral-600 dark:text-pink-100"
+                        } hover:text-pink-400`}
                     >
                         Home
+                        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-pink-400 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></span>
                     </Link>
                     <Link
-                        className={`hover:text-pink-400 transition-colors duration-300 ${
-                        pathname === "/about" ? "text-pink-500" : "text-neutral-600 dark:text-pink-100"
-                        }`}
                         href="/about"
+                        onClick={() => setIsMenuOpen(false)}
+                        className={`relative group overflow-hidden transition-colors duration-300 ${
+                        pathname === "/about" ? "text-pink-500" : "text-neutral-600 dark:text-pink-100"
+                        } hover:text-pink-400`}
                     >
-                        About Me
+                        About
+                        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-pink-400 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></span>
                     </Link>
                     <Link
-                        className={`hover:text-pink-400 transition-colors duration-300 ${
-                            pathname === "/contact" ? "text-pink-500" : "text-neutral-600 dark:text-pink-100"
-                        }`}
                         href="/contact"
+                        onClick={() => setIsMenuOpen(false)}
+                        className={`relative group overflow-hidden transition-colors duration-300 ${
+                        pathname === "/contact" ? "text-pink-500" : "text-neutral-600 dark:text-pink-100"
+                        } hover:text-pink-400`}
                     >
                         Contact
+                        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-pink-400 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></span>
                     </Link>
                     <button
                         onClick={handleSwitchMode}

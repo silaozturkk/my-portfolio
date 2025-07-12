@@ -2,8 +2,6 @@
 
 @tailwind utilities;
 
-
-
 @keyframes fadeLoop {
   0%, 100% {
     color: #6b7280; /* Tailwind text-gray-500 */

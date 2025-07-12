@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import { Poppins } from 'next/font/google';
 import Script from 'next/script';
 
+
 export const metadata = {
   title: "Sıla Öztürk",
   description: "",
@@ -30,6 +31,8 @@ export default function RootLayout({ children }) {
           `}
         </Script>
         <Navbar />
+        
+
         <div className='flex-grow'>
           {children}
         </div>

@@ -8,7 +8,7 @@ const Education = () => {
                 <h1 className="bg-gradient-to-r from-pink-400 via-pink-600 to-red-600 bg-clip-text text-transparent animate-fade-loop drop-shadow-lg font-bold">Contact <span className="text-neutral-600  dark:text-white font-semibold">Me</span><span className="text-pink-300 text-[45px]"> 💓</span></h1>
             </div>
             <div className="flex items-start flex-col lg:flex-row">
-                <form action="https://formsubmit.co/ozturksila100@gmail.com" method="POST" className="flex flex-col gap-4 px-5 md:px-0 md:mt-8 md:mx-35 lg:mt-0 lg:m-20 text-pink-600 dark:text-pink-200 md:text-xl order-last md:order-first">
+                <form action="https://formsubmit.co/ozturksila100@gmail.com" method="POST" className="flex flex-col gap-4 px-5 md:px-0 md:mt-8 md:mx-35 lg:mt-0 lg:m-20 text-pink-600 dark:text-pink-200 md:text-xl order-last md:order-first items-center justify-center w-full md:items-start md:justify-start md:w-auto">
                     <div className="flex flex-col">
                         <label>Name</label>
                         <input type="text" name="name" required className="px-2 text-neutral-700 rounded-md bg-white shadow-xl w-80 md:w-120 h-10 border-neutral-300 border-2 hover:shadow-pink-100 dark:hover:shadow-none hover:border-pink-300"></input>
