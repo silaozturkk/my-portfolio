@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar.jsx';
 import Footer from '@/components/Footer';
 import { Poppins } from 'next/font/google';
 import Script from 'next/script';
-
+import SocialLinks from '@/components/SocialLinks';
 
 export const metadata = {
   title: "Sıla Öztürk",
@@ -31,8 +31,7 @@ export default function RootLayout({ children }) {
           `}
         </Script>
         <Navbar />
-        
-
+        <SocialLinks />
         <div className='flex-grow'>
           {children}
         </div>

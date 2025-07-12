@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const SocialLinks = () => {
   return (
-    <div className="fixed bottom-6 left-6 flex flex-col gap-4 z-50 ">
+    <div className="hidden fixed bottom-6 left-6 md:flex flex-col gap-4 z-50 ">
       <a
         href="https://github.com/silaozturkk"
         target="_blank"
