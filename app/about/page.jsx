@@ -72,7 +72,7 @@ const About = () => {
                     <div className={`${activeTab === "Experience" ? "" : "hidden"}`}>
                         <div className="flex flex-col lg:flex-row justify-center items-center">
                             <img 
-                                src="/avatar-7.png" 
+                                src="/avatar-10.png" 
                                 alt="Avatar"
                                 width={450}
                                 height={300}

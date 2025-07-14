@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
           `}
         </Script>
         <Navbar />
-        <SocialLinks />
+     
         <div className='flex-grow'>
           {children}
         </div>
