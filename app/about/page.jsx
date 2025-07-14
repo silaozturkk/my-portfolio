@@ -74,7 +74,7 @@ const About = () => {
                             <img 
                                 src="/avatar-10.png" 
                                 alt="Avatar"
-                                width={450}
+                                width={350}
                                 height={300}
                                 className="order-last md:order-first"
                             />
