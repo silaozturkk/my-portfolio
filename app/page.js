@@ -22,7 +22,7 @@ export default function Home() {
                     </div>
                     <a 
                         href="mailto:ozturksila100@gmail.com" 
-                        class="text-xl shadow-2xl text-pink-500 hover:text-pink-600 dark:text-pink-100 dark:hover:text-pink-400"
+                        className="text-xl shadow-2xl text-pink-500 hover:text-pink-600 dark:text-pink-100 dark:hover:text-pink-400"
                     >
                         Contact 🩷
                     </a>
