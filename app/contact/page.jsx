@@ -7,7 +7,7 @@ const Education = () => {
             <div className="flex items-center justify-center text-4xl md:text-5xl pt-4 md:pt-10 ">
                 <h1 className="bg-gradient-to-r from-pink-400 via-pink-600 to-red-600 bg-clip-text text-transparent animate-fade-loop drop-shadow-lg font-bold">Contact <span className="text-neutral-600  dark:text-white font-semibold">Me</span><span className="text-pink-300 text-[45px]"> 💓</span></h1>
             </div>
-            <div className="flex items-center justify-center flex-col lg:flex-row w-full px-4 md:px-8 lg:px-25 dark:text-white  pt-8">
+            <div className="flex items-center justify-center flex-col lg:flex-row w-full px-4 md:px-8 lg:px-20 dark:text-white pt-8">
                 <form action="https://formsubmit.co/ozturksila100@gmail.com" method="POST" className="flex flex-col gap-4 w-full lg:w-3/5 order-last lg:order-first  ">
                     <div className="flex flex-col">
                         <label>Name</label>
