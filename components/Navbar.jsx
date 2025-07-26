@@ -19,7 +19,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="shadow-sm sticky top-0 z-50 text-xl flex justify-between items-center px-4 md:px-8 lg:px-20 xl:px-32 py-4 bg-pink-50/90 dark:bg-[#2c1c1e]/85 w-full">
+        <div className="shadow-sm sticky top-0 z-50 text-xl flex justify-between items-center px-6 md:px-10 lg:px-16 xl:px-20 py-4 bg-pink-50/90 dark:bg-[#2c1c1e]/85 w-full">
             <div className="border-2 border-pink-400 rounded-full p-1 hover:bg-pink-500  transition-colors duration-300">
                 <Link href="/" className="text-pink-400 hover:text-pink-100 text-2xl font-bold">So</Link>
             </div>
