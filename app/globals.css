@@ -14,6 +14,7 @@
 .text-fade-loop {
   animation: fadeLoop 3s ease-in-out infinite;
 }
+
 @keyframes fadeLoop {
   0%, 100% {
     opacity: 1;
@@ -25,6 +26,87 @@
 
 .animate-fade-loop {
   animation: fadeLoop 3s ease-in-out infinite;
+}
+
+/* Text Animation Classes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation Classes */
+.animate-text-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.animate-text-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-text-fade-in-left {
+  animation: fadeInLeft 0.8s ease-out;
+}
+
+.animate-text-fade-in-right {
+  animation: fadeInRight 0.8s ease-out;
+}
+
+/* Staggered animations for multiple elements */
+.animate-text-delay-1 {
+  animation: fadeInUp 0.8s ease-out 0.1s both;
+}
+
+.animate-text-delay-2 {
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.animate-text-delay-3 {
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.animate-text-delay-4 {
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.animate-text-delay-5 {
+  animation: fadeInUp 0.8s ease-out 0.5s both;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));

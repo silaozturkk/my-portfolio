@@ -22,24 +22,24 @@ const About = () => {
                     alt="Avatar"
                     width={500}
                     height={350}
-                    className=""
+                    className="animate-text-fade-in-left"
                 >
                 </img>
                 <div className="lg:px-14 flex flex-col gap-6 md:gap-12 pt-4 lg:pt-14">
-                    <h1 className="text-5xl md:text-6xl bg-gradient-to-r from-pink-400 via-pink-600 to-red-600 bg-clip-text text-transparent animate-fade-loop drop-shadow-lg font-semibold md:font-bold text-center lg:text-start">About Me</h1>
-                    <div className="flex flex-col gap-4 px-4 md:px-4 lg:px-0 text-neutral-600 dark:text-white text-base md:text-xl text-justify lg:text-start">
+                    <h1 className="text-5xl md:text-6xl bg-gradient-to-r from-pink-400 via-pink-600 to-red-600 bg-clip-text text-transparent animate-fade-loop drop-shadow-lg font-semibold md:font-bold text-center lg:text-start animate-text-fade-in-up">About Me</h1>
+                    <div className="flex flex-col gap-4 px-4 md:px-4 lg:px-0 text-neutral-600 dark:text-white text-base md:text-xl text-justify lg:text-start animate-text-delay-1">
                         <p>
                             Hi, I'm Sıla Öztürk, a Computer Engineering student based in Istanbul, Turkey. I'm passionate about creating solutions that make people's lives easier through technology. I enjoy solving problems by writing clean and efficient code, and I continuously work on improving myself by learning new tools and frameworks.
                         </p>
                         <p>
-                            Currently, I’m focusing on front-end development using React, building real-world applications through personal projects and internships. I value teamwork and open communication, and I enjoy learning from others as well as sharing my own knowledge.
+                            Currently, I'm focusing on front-end development using React, building real-world applications through personal projects and internships. I value teamwork and open communication, and I enjoy learning from others as well as sharing my own knowledge.
                         </p>
                     </div>
                 </div>
             </div>
             <div className=" flex flex-col justify-center items-center pt-10">
-                <h1 className="text-6xl bg-gradient-to-r from-pink-400 via-pink-600 to-red-600 bg-clip-text text-transparent animate-fade-loop drop-shadow-lg font-semibold">Skills</h1>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-10 py-8 md:py-15">
+                <h1 className="text-6xl bg-gradient-to-r from-pink-400 via-pink-600 to-red-600 bg-clip-text text-transparent animate-fade-loop drop-shadow-lg font-semibold animate-text-fade-in-up">Skills</h1>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-10 py-8 md:py-15 animate-text-delay-1">
                     <Card icon={FaJava} /> 
                     <Card icon={IoLogoJavascript} />
                     <Card icon={FaHtml5} />
@@ -51,8 +51,8 @@ const About = () => {
                 </div>
             </div>
             <div className="flex flex-col gap-6">
-                <h1 className="text-5xl md:text-6xl bg-gradient-to-r from-pink-300 via-pink-500 to-red-500 bg-clip-text text-transparent animate-fade-loop drop-shadow-lg font-semibold md:font-bold text-center ">{activeTab}</h1>
-                <div className="flex justify-center">
+                <h1 className="text-5xl md:text-6xl bg-gradient-to-r from-pink-300 via-pink-500 to-red-500 bg-clip-text text-transparent animate-fade-loop drop-shadow-lg font-semibold md:font-bold text-center animate-text-fade-in-up">{activeTab}</h1>
+                <div className="flex justify-center animate-text-delay-1">
                     <div className="flex flex-row items-center gap-2 shadow-3xl bg-white px-3 py-3 rounded-xl">
                         <button type="button" 
                             className={`px-2 py-1.5 rounded-md  
@@ -69,17 +69,17 @@ const About = () => {
                     </div>
                 </div>
                 <div className="md:pb-8">
-                    <div className={`${activeTab === "Experience" ? "" : "hidden"}`}>
+                    <div className={`${activeTab === "Experience" ? "animate-text-fade-in" : "hidden"}`}>
                         <div className="flex flex-col lg:flex-row justify-center items-center">
                             <img 
                                 src="/avatar-10.png" 
                                 alt="Avatar"
                                 width={350}
                                 height={300}
-                                className="order-last md:order-first"
+                                className="order-last md:order-first animate-text-fade-in-left"
                             />
                           
-                            <div className="flex flex-col gap-1 mx-5 lg:mx-32 text-neutral-600 dark:text-white">
+                            <div className="flex flex-col gap-1 mx-5 lg:mx-32 text-neutral-600 dark:text-white animate-text-fade-in-right">
                                 <h1 className="text-xl md:text-2xl bg-gradient-to-r text-pink-500 drop-shadow-lg font-semibold md:font-bold">Software Developer Intern | Beylikdüzü Municipality<span className="hidden md:flex"> Directorate of Information Technologies</span></h1>
                                 <p className="text-base text-pink-500 ">June 2025 – July 2025</p>
                                 <p>Learned web development technologies including JavaScript, React, and Next.js during the internship.</p>
@@ -91,9 +91,9 @@ const About = () => {
                         </div>
                     </div>
 
-                    <div className={`${activeTab === "Education" ? "" : "hidden"}`}>
+                    <div className={`${activeTab === "Education" ? "animate-text-fade-in" : "hidden"}`}>
                         <div className="flex flex-col lg:flex-row justify-center items-center">
-                            <div className="flex flex-col gap-1 mx-5 lg:mx-32 text-neutral-600 dark:text-white">
+                            <div className="flex flex-col gap-1 mx-5 lg:mx-32 text-neutral-600 dark:text-white animate-text-fade-in-left">
                                 <h1 className="text-2xl bg-gradient-to-r text-pink-500 drop-shadow-lg font-semibold md:font-bold ">Computer Engineering | İstanbul Rumeli University </h1>
                                 <p className="text-base text-pink-500">2023-2027</p>
                                 <p>I am a 3nd-year Computer Engineering student at İstanbul Rumeli University with a GPA of 3.62/4.00.</p>
@@ -106,7 +106,7 @@ const About = () => {
                                 alt="Avatar"
                                 width={450}
                                 height={300}
-                                className=""
+                                className="animate-text-fade-in-right"
                             >
                             </img>
                         </div>
